@@ -1,0 +1,802 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f8f2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+}
+
+/*================ NAVBAR ================*/
+
+nav{
+    width:100%;
+    background:white;
+    height:80px;
+    border-radius:18px;
+    margin:15px auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.logo{
+    font-size:40px;
+    font-weight:700;
+    color:#299b1d;
+}
+
+.logo span{
+    color:#e32121;
+}
+
+.search{
+    width:45%;
+    position:relative;
+}
+
+.search input{
+    width:100%;
+    height:48px;
+    border:none;
+    outline:none;
+    background:#f3f5f4;
+    border-radius:30px;
+    padding-left:22px;
+    padding-right:60px;
+}
+
+.search button{
+    position:absolute;
+    right:6px;
+    top:6px;
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:50%;
+    background:#3aa52a;
+    color:white;
+    cursor:pointer;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    color:#333;
+    font-weight:500;
+}
+
+/*============== CONTENT =================*/
+
+.wrapper{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:30px;
+    margin-top:25px;
+}
+
+/*============== SIDEBAR ================*/
+
+.sidebar{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    height:fit-content;
+}
+
+.sidebar h3{
+    margin-bottom:20px;
+    color:#299b1d;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:8px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    background:#eff8ec;
+}
+
+.sidebar .active{
+    background:#dff5d9;
+    color:#228d19;
+    font-weight:600;
+}
+
+.sidebar i{
+    width:28px;
+}
+
+/*============== PROFILE CARD ===============*/
+
+.content{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.profile-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.profile-left{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.avatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:#dff5d9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    color:#299b1d;
+    position:relative;
+}
+
+.edit-photo{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#2fa52a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.profile-info h1{
+    font-size:35px;
+}
+
+.profile-info p{
+    color:#666;
+    margin-top:8px;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 14px;
+    background:#dff5d9;
+    color:#228d19;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.edit-btn{
+    padding:14px 28px;
+    border:none;
+    background:#2fa52a;
+    color:white;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.form-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.form-card h2{
+    margin-bottom:25px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    color:#555;
+    font-weight:500;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+
+    height:52px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:0 15px;
+    outline:none;
+    transition:.3s;
+
+}
+
+textarea{
+
+height:140px!important;
+padding-top:15px!important;
+resize:none;
+
+}
+
+.input-group input:focus,
+.input-group select:focus,
+textarea:focus{
+
+border-color:#34a853;
+
+}
+
+.save{
+
+margin-top:30px;
+width:100%;
+height:55px;
+border:none;
+background:#2fa52a;
+color:white;
+font-size:17px;
+border-radius:14px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.save:hover{
+
+background:#228d19;
+
+}
+
+/* ================= PROFILE HEADER PREMIUM ================= */
+
+.profile-card{
+    background:linear-gradient(135deg,#ffffff,#f6fff3);
+    border:1px solid #edf4ea;
+    overflow:hidden;
+    position:relative;
+}
+
+.profile-card::before{
+    content:"";
+    position:absolute;
+    right:-70px;
+    top:-70px;
+    width:220px;
+    height:220px;
+    background:rgba(52,168,83,.08);
+    border-radius:50%;
+}
+
+.profile-card::after{
+    content:"";
+    position:absolute;
+    left:-80px;
+    bottom:-80px;
+    width:180px;
+    height:180px;
+    background:rgba(52,168,83,.05);
+    border-radius:50%;
+}
+
+.avatar{
+    border:6px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.avatar:hover{
+    transform:scale(1.05);
+}
+
+.edit-photo{
+    transition:.3s;
+    border:3px solid white;
+}
+
+.edit-photo:hover{
+    background:#20861b;
+}
+
+.profile-info h1{
+    color:#222;
+    font-size:34px;
+}
+
+.profile-info p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+    font-size:15px;
+}
+
+.profile-info p i{
+    color:#34a853;
+}
+
+.badge{
+    margin-top:15px;
+}
+
+/* ================= FORM ================= */
+
+.form-card{
+    transition:.3s;
+}
+
+.form-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+}
+
+.form-card h2{
+    color:#228d19;
+    margin-bottom:25px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+
+    background:#fbfbfb;
+
+}
+
+.input-group input:hover,
+.input-group select:hover,
+.input-group textarea:hover{
+
+border-color:#7ecf6d;
+
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+
+background:white;
+box-shadow:0 0 0 4px rgba(52,168,83,.10);
+
+}
+
+/* ================= BUTTON ================= */
+
+.edit-btn,
+.save{
+
+font-weight:600;
+letter-spacing:.3px;
+transition:.35s;
+
+}
+
+.edit-btn:hover,
+.save:hover{
+
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(52,168,83,.28);
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+.wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.sidebar{
+
+order:2;
+
+}
+
+.content{
+
+order:1;
+
+}
+
+.profile-card{
+
+flex-direction:column;
+align-items:flex-start;
+gap:25px;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.search{
+
+display:none;
+
+}
+
+nav{
+
+padding:0 20px;
+
+}
+
+.menu{
+
+gap:18px;
+
+font-size:14px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.profile-left{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.profile-info{
+
+width:100%;
+
+}
+
+.profile-info p{
+
+justify-content:center;
+
+}
+
+.edit-btn{
+
+width:100%;
+
+}
+
+.logo{
+
+font-size:30px;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.container{
+
+width:96%;
+
+}
+
+}
+
+/* ==================== INPUT DISABLED ==================== */
+
+input:disabled,
+select:disabled,
+textarea:disabled{
+
+background:#f5f5f5;
+color:#666;
+cursor:default;
+
+}
+
+/* ==================== TRANSISI ==================== */
+
+.input-group{
+
+transition:.25s;
+
+}
+
+.avatar img{
+
+display:block;
+
+}
+
+/* ==================== BUTTON EFFECT ==================== */
+
+.edit-btn:active,
+.save:active{
+
+transform:scale(.97);
+
+}
+
+.save{
+
+background:linear-gradient(135deg,#37b24d,#228d19);
+
+}
+
+.edit-btn{
+
+background:white;
+border:2px solid #34a853;
+color:#34a853;
+
+}
+
+.edit-btn:hover{
+
+background:#34a853;
+color:white;
+
+}
+
+/* ==================== CARD ==================== */
+
+.sidebar,
+.form-card,
+.profile-card{
+
+transition:.35s;
+
+}
+
+.sidebar:hover,
+.form-card:hover{
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}/* ================= ACCOUNT INFO ================= */
+
+.info-box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.info-card{
+
+    background:linear-gradient(135deg,#39b54a,#2e9b38);
+    color:white;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.info-card i{
+
+width:60px;
+height:60px;
+background:rgba(255,255,255,.18);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+
+}
+
+.info-card h3{
+
+font-size:30px;
+
+}
+
+.info-card p{
+
+font-size:14px;
+opacity:.9;
+
+}
+
+/* ================= PASSWORD ================= */
+
+.password-box{
+
+position:relative;
+
+}
+
+.password-box input{
+
+padding-right:50px;
+
+}
+
+.toggle-password{
+
+position:absolute;
+right:18px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+color:#666;
+
+}
+
+@media(max-width:900px){
+
+.info-box{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ================= BACKGROUND DECORATION ================= */
+
+body{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#34a85315;
+    border-radius:50%;
+    top:-180px;
+    right:-180px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#2fa52a10;
+    border-radius:50%;
+    bottom:-150px;
+    left:-150px;
+    z-index:-1;
+}
+
+/* ================= UPLOAD ================= */
+
+.upload-box{
+
+    margin-top:15px;
+    border:2px dashed #34a853;
+    border-radius:16px;
+    padding:30px;
+    background:#f8fff8;
+    text-align:center;
+    transition:.3s;
+    cursor:pointer;
+
+}
+
+.upload-box:hover{
+
+background:#eefbea;
+
+}
+
+.upload-box i{
+
+font-size:40px;
+color:#34a853;
+margin-bottom:12px;
+
+}
+
+.upload-box p{
+
+color:#666;
+
+}
+
+/* ================= BUTTON LOADING ================= */
+
+.loading{
+
+pointer-events:none;
+opacity:.8;
+
+}
+
+.loading i{
+
+animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#34a853;
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ececec;
+
+}

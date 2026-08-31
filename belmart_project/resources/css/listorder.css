@@ -1,0 +1,725 @@
+    /* =======================================
+   GOOGLE FONT
+======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =======================================
+   RESET
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#F8FFF6;
+
+    color:#333;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+img{
+
+    display:block;
+
+}
+
+/* =======================================
+   PAGE
+======================================= */
+
+.orders-page{
+
+    width:100%;
+
+    padding:35px;
+
+}
+
+/* =======================================
+   HEADER
+======================================= */
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.page-header h2{
+
+    font-size:34px;
+
+    color:#5DAA34;
+
+    font-weight:700;
+
+}
+
+.page-header p{
+
+    margin-top:6px;
+
+    color:#777;
+
+}
+
+.header-button{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+/* =======================================
+   BUTTON
+======================================= */
+
+.btn{
+
+    height:48px;
+
+    padding:0 22px;
+
+    border-radius:14px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn i{
+
+    margin-right:8px;
+
+}
+
+.btn-primary{
+
+    background:#8EDB61;
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:#73C042;
+
+}
+
+.btn-outline{
+
+    background:white;
+
+    color:#73C042;
+
+    border:2px solid #73C042;
+
+}
+
+.btn-outline:hover{
+
+    background:#73C042;
+
+    color:white;
+
+}
+
+.btn-filter{
+
+    background:#FFD84A;
+
+    color:#444;
+
+}
+
+/* =======================================
+   FILTER
+======================================= */
+
+.filter-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:white;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+    margin-bottom:30px;
+
+}
+
+.search-box{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#F5F9F2;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    height:52px;
+
+}
+
+.search-box i{
+
+    color:#73C042;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:14px;
+
+}
+
+.filter-card select,
+
+.filter-card input{
+
+    height:52px;
+
+    padding:0 18px;
+
+    border:1px solid #E5E5E5;
+
+    border-radius:14px;
+
+    outline:none;
+
+    background:white;
+
+    font-size:14px;
+
+}
+
+/* =======================================
+   TABLE
+======================================= */
+
+.table-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.table-order{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.table-order thead{
+
+    background:#ECF9E6;
+
+}
+
+.table-order th{
+
+    padding:20px;
+
+    text-align:left;
+
+    font-size:14px;
+
+    color:#5DAA34;
+
+    font-weight:700;
+
+}
+
+.table-order td{
+
+    padding:18px 20px;
+
+    border-bottom:1px solid #F0F0F0;
+
+    font-size:14px;
+
+    vertical-align:middle;
+
+}
+
+.table-order tbody tr{
+
+    transition:.3s;
+
+}
+
+.table-order tbody tr:hover{
+
+    background:#FAFFF8;
+
+}
+
+/* =======================================
+   CUSTOMER
+======================================= */
+
+.customer{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.customer img{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #E8F8DD;
+
+}
+
+.customer h5{
+
+    font-size:14px;
+
+    color:#333;
+
+    margin-bottom:3px;
+
+    font-weight:600;
+
+}
+
+.customer span{
+
+    color:#888;
+
+    font-size:12px;
+
+}
+
+/* =======================================
+   PAYMENT
+======================================= */
+
+.payment{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    background:#E8F8DD;
+
+    color:#5DAA34;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* =======================================
+   STATUS
+======================================= */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:120px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.waiting{
+
+    background:#FFF7D8;
+
+    color:#D89B00;
+
+}
+
+.process{
+
+    background:#E7F4FF;
+
+    color:#1F78D1;
+
+}
+
+.shipping{
+
+    background:#ECE7FF;
+
+    color:#7357D8;
+
+}
+
+.success{
+
+    background:#E7F9EC;
+
+    color:#35A853;
+
+}
+
+/* =======================================
+   ACTION BUTTON
+======================================= */
+
+.action{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.action a{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    transition:.25s;
+
+}
+
+.btn-view{
+
+    background:#8EDB61;
+
+}
+
+.btn-view:hover{
+
+    background:#73C042;
+
+    transform:translateY(-2px);
+
+}
+
+.btn-edit{
+
+    background:#FFD84A;
+
+    color:#444 !important;
+
+}
+
+.btn-edit:hover{
+
+    background:#F7CB22;
+
+    transform:translateY(-2px);
+
+}
+
+.btn-delete{
+
+    background:#FF7070;
+
+}
+
+.btn-delete:hover{
+
+    background:#EF5350;
+
+    transform:translateY(-2px);
+
+}
+
+.btn-print{
+
+    background:#59C1FF;
+
+}
+
+.btn-print:hover{
+
+    background:#35A9F4;
+
+    transform:translateY(-2px);
+
+}
+
+/* =======================================
+   TABLE FOOTER
+======================================= */
+
+.table-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 28px;
+
+    background:white;
+
+}
+
+.table-info{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.pagination{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.page{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#F4F8F2;
+
+    color:#555;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.page:hover{
+
+    background:#DFF3CF;
+
+}
+
+.page.active{
+
+    background:#8EDB61;
+
+    color:white;
+
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media(max-width:1200px){
+
+    .filter-card{
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .header-button{
+
+        width:100%;
+
+    }
+
+    .btn{
+
+        flex:1;
+
+    }
+
+    .table-card{
+
+        overflow-x:auto;
+
+    }
+
+    .table-order{
+
+        min-width:1200px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .orders-page{
+
+        padding:20px;
+
+    }
+
+    .filter-card{
+
+        padding:18px;
+
+    }
+
+    .search-box{
+
+        width:100%;
+
+    }
+
+    .filter-card select,
+
+    .filter-card input,
+
+    .btn-filter{
+
+        width:100%;
+
+    }
+
+    .table-footer{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .page-header h2{
+
+        font-size:28px;
+
+    }
+
+    .customer img{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .status{
+
+        min-width:95px;
+
+        font-size:11px;
+
+    }
+
+}

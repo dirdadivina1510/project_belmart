@@ -1,0 +1,656 @@
+
+    /* =========================================
+   HISTORY PAGE
+========================================= */
+
+.history-page {
+    width: 100%;
+    padding: 35px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.history-page .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.history-page .page-header h2 {
+    margin: 0;
+    color: #68B83F;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.history-page .page-header p {
+    margin: 6px 0 0;
+    color: #8A8A8A;
+    font-size: 14px;
+}
+
+.header-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =========================================
+   EXPORT BUTTON
+========================================= */
+
+.btn-export {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 44px;
+    padding: 0 19px;
+    border: 1px solid #D8EFD0;
+    border-radius: 11px;
+    background: #FFFFFF;
+    color: #68B83F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.btn-export:hover {
+    background: #68B83F;
+    color: #FFFFFF;
+    border-color: #68B83F;
+}
+
+/* =========================================
+   FILTER
+========================================= */
+
+.history-page .filter-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    margin-bottom: 22px;
+    background: #FFFFFF;
+    border: 1px solid #EDF4E9;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(90, 150, 70, .05);
+}
+
+.history-page .search-box {
+    flex: 1;
+    min-width: 230px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    background: #F6FBF3;
+    border: 1px solid #E5F1DF;
+    border-radius: 10px;
+}
+
+.history-page .search-box i {
+    color: #7BC653;
+    font-size: 14px;
+}
+
+.history-page .search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #444;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.history-page .filter-card select,
+.history-page .filter-card input[type="date"] {
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #E4EAE1;
+    border-radius: 10px;
+    outline: none;
+    background: #FFFFFF;
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.history-page .filter-card input[type="date"] {
+    width: 145px;
+}
+
+.history-page .filter-card span {
+    color: #999;
+    font-size: 12px;
+}
+
+/* =========================================
+   FILTER BUTTON
+========================================= */
+
+.btn-filter {
+    height: 44px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 10px;
+    background: #8DD565;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.btn-filter:hover {
+    background: #6FC248;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.history-page .table-card {
+    overflow-x: auto;
+    background: #FFFFFF;
+    border: 1px solid #EDF3E9;
+    border-radius: 15px;
+    box-shadow: 0 5px 22px rgba(90, 150, 70, .05);
+}
+
+.history-table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+}
+
+.history-table thead {
+    background: #F1FBEA;
+}
+
+.history-table th {
+    padding: 16px 18px;
+    border-bottom: 1px solid #E6F0E1;
+    color: #68A94B;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.history-table td {
+    padding: 17px 18px;
+    border-bottom: 1px solid #F0F3EF;
+    color: #555;
+    text-align: left;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.history-table tbody tr {
+    transition: .2s ease;
+}
+
+.history-table tbody tr:hover {
+    background: #FBFFF9;
+}
+
+.history-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   ORDER ID
+========================================= */
+
+.history-table td strong {
+    color: #4F4F4F;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================
+   CUSTOMER
+========================================= */
+
+.history-page .customer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 155px;
+}
+
+.history-page .customer img {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border: 2px solid #E7F5DF;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.history-page .customer h5 {
+    margin: 0 0 3px;
+    color: #3F3F3F;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.history-page .customer span {
+    color: #999;
+    font-size: 10px;
+}
+
+/* =========================================
+   PAYMENT
+========================================= */
+
+.history-page .payment {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #EAF8E4;
+    color: #5EAF3C;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.history-page .status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 13px;
+    border-radius: 20px;
+    background: #E9F8E5;
+    color: #4FAE35;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.history-page .status.success {
+    background: #E9F8E5;
+    color: #4FAE35;
+}
+
+/* =========================================
+   ACTION
+========================================= */
+
+.history-page .action {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.history-page .action a {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.history-page .btn-view {
+    background: #EAF8E4;
+    color: #68B83F;
+}
+
+.history-page .btn-view:hover {
+    background: #68B83F;
+    color: #FFFFFF;
+}
+
+.history-page .btn-invoice {
+    background: #FFF5D7;
+    color: #D5A21C;
+}
+
+.history-page .btn-invoice:hover {
+    background: #F1C83A;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   TABLE FOOTER
+========================================= */
+
+.history-page .table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background: #FFFFFF;
+    border-top: 1px solid #EDF2EA;
+}
+
+.history-page .table-info {
+    color: #999;
+    font-size: 11px;
+}
+
+.history-page .table-info strong {
+    color: #666;
+    font-weight: 600;
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.history-page .pagination {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.history-page .page {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: #F4F8F1;
+    color: #777;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.history-page .page:hover {
+    background: #E3F4D9;
+    color: #5EAF3C;
+}
+
+.history-page .page.active {
+    background: #8DD565;
+    color: #FFFFFF;
+}
+
+.history-page .page.disabled {
+    opacity: .45;
+    cursor: default;
+}
+
+.history-page .pagination-dots {
+    color: #AAA;
+    font-size: 11px;
+}
+
+/* =========================================
+   RESPONSIVE - LARGE TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .history-page {
+        padding: 28px;
+    }
+
+    .history-page .filter-card {
+        flex-wrap: wrap;
+    }
+
+    .history-page .search-box {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .history-page .filter-card select,
+    .history-page .filter-card input[type="date"],
+    .history-page .btn-filter {
+        flex: 1;
+    }
+
+    .history-page .filter-card span {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .history-page {
+        padding: 24px;
+    }
+
+    .history-page .page-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .history-page .page-header h2 {
+        font-size: 26px;
+    }
+
+    .history-page .filter-card {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .history-page .filter-card select,
+    .history-page .filter-card input[type="date"],
+    .history-page .btn-filter {
+        min-width: 150px;
+    }
+
+    .history-page .table-card {
+        border-radius: 13px;
+    }
+
+    .history-table {
+        min-width: 1050px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .history-page {
+        padding: 18px;
+    }
+
+    .history-page .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .history-page .page-header h2 {
+        font-size: 24px;
+    }
+
+    .history-page .page-header p {
+        font-size: 12px;
+    }
+
+    .header-action {
+        width: 100%;
+    }
+
+    .btn-export {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .history-page .filter-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .history-page .search-box {
+        grid-column: 1 / -1;
+        min-width: 0;
+    }
+
+    .history-page .filter-card select,
+    .history-page .filter-card input[type="date"],
+    .history-page .btn-filter {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .history-page .table-card {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .history-table {
+        min-width: 1050px;
+    }
+
+    .history-page .table-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .history-page .pagination {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .history-page {
+        padding: 14px;
+    }
+
+    .history-page .page-header h2 {
+        font-size: 21px;
+    }
+
+    .history-page .filter-card {
+        grid-template-columns: 1fr;
+    }
+
+    .history-page .search-box {
+        grid-column: auto;
+    }
+
+    .history-page .filter-card select,
+    .history-page .filter-card input[type="date"],
+    .history-page .btn-filter {
+        height: 42px;
+    }
+
+    .history-page .table-footer {
+        padding: 15px;
+    }
+
+    .history-page .table-info {
+        line-height: 1.6;
+    }
+
+    .history-page .pagination {
+        gap: 4px;
+    }
+
+    .history-page .page {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.history-page .table-card::-webkit-scrollbar {
+    height: 7px;
+}
+
+.history-page .table-card::-webkit-scrollbar-track {
+    background: #F1F5EF;
+    border-radius: 10px;
+}
+
+.history-page .table-card::-webkit-scrollbar-thumb {
+    background: #B8DEA8;
+    border-radius: 10px;
+}
+
+.history-page .table-card::-webkit-scrollbar-thumb:hover {
+    background: #8CCB70;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.history-page input:focus,
+.history-page select:focus {
+
+    border-color: #9BD47D !important;
+
+    box-shadow: 0 0 0 3px rgba(141, 213, 101, .12);
+
+}
+
+
+/* =========================================
+   SELECTION
+========================================= */
+
+.history-page ::selection {
+    background: #BDE8A9;
+    color: #3F7130;
+}
+
+
+/* =========================================
+   SMOOTH HOVER
+========================================= */
+
+.history-page button,
+.history-page a,
+.history-page input,
+.history-page select {
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
+}

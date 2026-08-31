@@ -1,0 +1,909 @@
+        /* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #F6FFF2 0%,
+        #FFFEE8 100%
+    );
+
+    color:#2F2F2F;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.container{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.payment-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px 0;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.payment-card{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1.25fr .75fr;
+
+    gap:35px;
+
+}
+
+/* ==========================================
+   LEFT
+========================================== */
+
+.payment-left{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.06);
+
+}
+
+.logo img{
+
+    width:170px;
+
+}
+
+.payment-title{
+
+    margin-top:25px;
+
+}
+
+.payment-title h2{
+
+    font-size:38px;
+
+    color:#356B1D;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.payment-title p{
+
+    color:#6D6D6D;
+
+    line-height:30px;
+
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:28px;
+
+    padding:15px 20px;
+
+    border-radius:16px;
+
+    font-weight:600;
+
+}
+
+.status.waiting{
+
+    background:#FFF8DA;
+
+    color:#C78A00;
+
+}
+
+.status i{
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown-box{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    background:#F7FCEB;
+
+    padding:28px;
+
+    border-radius:22px;
+
+}
+
+.countdown-box h4{
+
+    color:#5D922D;
+
+    margin-bottom:15px;
+
+}
+
+#countdown{
+
+    font-size:50px;
+
+    font-weight:700;
+
+    color:#3F7E1E;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+}
+
+.countdown-box p{
+
+    color:#777;
+
+    line-height:26px;
+
+}
+
+/* ==========================================
+   QRIS
+========================================== */
+
+.qris-box{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+    border:3px dashed #8BC53F;
+
+    border-radius:24px;
+
+    padding:30px;
+
+}
+
+.qris-box img{
+
+    width:320px;
+
+    transition:.35s;
+
+}
+
+.qris-box:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================================
+   SCAN TEXT
+========================================== */
+
+.scan-text{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+.scan-text strong{
+
+    color:#5A9F2A;
+
+}
+
+/* ==========================================
+   PAYMENT ACTION
+========================================== */
+
+.payment-action{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.payment-action button{
+
+    flex:1;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.download{
+
+    background:#EEF8E3;
+
+    color:#5B9C2D;
+
+}
+
+.download:hover{
+
+    background:#DFF3C8;
+
+    transform:translateY(-3px);
+
+}
+
+.confirm{
+
+    background:linear-gradient(
+        135deg,
+        #82C341,
+        #FFD54A
+    );
+
+    color:white;
+
+    box-shadow:0 12px 30px rgba(130,195,65,.25);
+
+}
+
+.confirm:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(130,195,65,.35);
+
+}
+
+/* ==========================================
+   RIGHT PANEL
+========================================== */
+
+.payment-right{
+
+    display:flex;
+
+}
+
+.summary{
+
+    width:100%;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.06);
+
+}
+
+.summary h3{
+
+    color:#356B1D;
+
+    font-size:26px;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   PRODUCT LIST
+========================================== */
+
+.summary-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:22px;
+
+}
+
+.summary-item img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    background:#F8FCEB;
+
+    border-radius:18px;
+
+    padding:8px;
+
+}
+
+.summary-item h4{
+
+    font-size:15px;
+
+    color:#2F2F2F;
+
+    margin-bottom:5px;
+
+}
+
+.summary-item span{
+
+    display:block;
+
+    color:#888;
+
+    font-size:13px;
+
+}
+
+.summary-item b{
+
+    margin-left:auto;
+
+    color:#4F8E23;
+
+    font-size:16px;
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#E8E8E8;
+
+    margin:22px 0;
+
+}
+
+/* ==========================================
+   PRICE LIST
+========================================== */
+
+.price-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.price-list .row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.price-list span{
+
+    color:#666;
+
+}
+
+.price-list b{
+
+    color:#333;
+
+}
+
+.discount{
+
+    color:#3FAE45 !important;
+
+}
+
+/* ==========================================
+   TOTAL
+========================================== */
+
+.total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:28px 0;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #F5FFE7,
+        #FFFCE6
+    );
+
+}
+
+.total span{
+
+    color:#5C5C5C;
+
+}
+
+.total h2{
+
+    color:#5AA72B;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   PAYMENT METHOD
+========================================== */
+
+.payment-method{
+
+    margin-top:25px;
+
+    background:#F9FDF2;
+
+    border:2px solid #E8F4D8;
+
+    border-radius:20px;
+
+    padding:25px;
+
+}
+
+.method-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+}
+
+.method-header i{
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#82C341,#FFD54A);
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.method-header h4{
+
+    color:#3C6D1E;
+
+    font-size:20px;
+
+}
+
+.payment-method p{
+
+    color:#666;
+
+    line-height:28px;
+
+    margin-bottom:18px;
+
+}
+
+.payment-method ul{
+
+    list-style:none;
+
+}
+
+.payment-method li{
+
+    padding:10px 0;
+
+    color:#4F4F4F;
+
+    border-bottom:1px dashed #E2E2E2;
+
+}
+
+.payment-method li:last-child{
+
+    border:none;
+
+}
+
+/* ==========================================
+   NOTE
+========================================== */
+
+.note-box{
+
+    margin-top:25px;
+
+    background:#FFFBE9;
+
+    border-left:6px solid #FFD54A;
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+.note-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+    color:#C58A00;
+
+    font-weight:600;
+
+}
+
+.note-box p{
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+/* ==========================================
+   SECURITY
+========================================== */
+
+.security-box{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:28px;
+
+}
+
+.security-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#F6FFF0;
+
+    border-radius:18px;
+
+    padding:18px;
+
+}
+
+.security-item i{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#82C341;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.security-item strong{
+
+    display:block;
+
+    color:#356B1D;
+
+    margin-bottom:6px;
+
+}
+
+.security-item span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EEF8E3;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#82C341;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5EA52B;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.payment-card{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1100px){
+
+    .payment-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .payment-left,
+
+    .summary{
+
+        padding:25px;
+
+    }
+
+    .payment-title h2{
+
+        font-size:30px;
+
+    }
+
+    #countdown{
+
+        font-size:38px;
+
+    }
+
+    .payment-action{
+
+        flex-direction:column;
+
+    }
+
+    .security-box{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .summary-item{
+
+        flex-wrap:wrap;
+
+    }
+
+    .summary-item b{
+
+        width:100%;
+
+        margin-left:0;
+
+        margin-top:8px;
+
+    }
+
+    .total{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        text-align:center;
+
+    }
+
+    .qris-box img{
+
+        width:240px;
+
+    }
+
+}
