@@ -88,6 +88,19 @@ class PromoController extends Controller
             'end_date' => 'required|date|after_or_equal:start_date',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'is_active' => 'nullable|boolean',
+        ], [
+            'name.required' => 'Kolom nama promo wajib diisi.',
+            'code.required' => 'Kolom kode promo wajib diisi.',
+            'code.unique' => 'Kode promo ini sudah ada/digunakan, silakan buat kode lain.',
+            'discount_type.required' => 'Jenis diskon wajib dipilih.',
+            'discount_value.required' => 'Nilai diskon wajib diisi.',
+            'discount_value.min' => 'Nilai diskon tidak boleh negatif.',
+            'start_date.required' => 'Tanggal mulai wajib diisi.',
+            'end_date.required' => 'Tanggal berakhir wajib diisi.',
+            'end_date.after_or_equal' => 'Tanggal berakhir tidak boleh sebelum tanggal mulai.',
+            'image.image' => 'File gambar promo harus berupa gambar.',
+            'image.mimes' => 'Format gambar harus berupa JPG, JPEG, PNG, atau WEBP.',
+            'image.max' => 'Ukuran gambar maksimal 2 MB.',
         ]);
 
         if ($validated['discount_type'] === 'percentage' && $validated['discount_value'] > 100) {
@@ -143,6 +156,19 @@ class PromoController extends Controller
             'end_date' => 'required|date|after_or_equal:start_date',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'is_active' => 'nullable|boolean',
+        ], [
+            'name.required' => 'Kolom nama promo wajib diisi.',
+            'code.required' => 'Kolom kode promo wajib diisi.',
+            'code.unique' => 'Kode promo ini sudah ada/digunakan, silakan buat kode lain.',
+            'discount_type.required' => 'Jenis diskon wajib dipilih.',
+            'discount_value.required' => 'Nilai diskon wajib diisi.',
+            'discount_value.min' => 'Nilai diskon tidak boleh negatif.',
+            'start_date.required' => 'Tanggal mulai wajib diisi.',
+            'end_date.required' => 'Tanggal berakhir wajib diisi.',
+            'end_date.after_or_equal' => 'Tanggal berakhir tidak boleh sebelum tanggal mulai.',
+            'image.image' => 'File gambar promo harus berupa gambar.',
+            'image.mimes' => 'Format gambar harus berupa JPG, JPEG, PNG, atau WEBP.',
+            'image.max' => 'Ukuran gambar maksimal 2 MB.',
         ]);
 
         if ($validated['discount_type'] === 'percentage' && $validated['discount_value'] > 100) {

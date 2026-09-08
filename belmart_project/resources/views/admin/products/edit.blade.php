@@ -52,28 +52,44 @@
                         <div class="form-group">
                             <label for="name">Nama Produk <span>*</span></label>
                             <input type="text" id="name" name="name" value="{{ old('name', $product->name) }}" required>
+                            @error('name')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="category">Kategori <span>*</span></label>
                             <select id="category" name="category" required>
-                                <option value="Nugget" selected>Nugget</option>
+                                <option value="Nugget" {{ old('category', $product->category) == 'Nugget' ? 'selected' : '' }}>Nugget</option>
+                                <option value="Sosis" {{ old('category', $product->category) == 'Sosis' ? 'selected' : '' }}>Sosis</option>
+                                <option value="Bakso" {{ old('category', $product->category) == 'Bakso' ? 'selected' : '' }}>Bakso</option>
+                                <option value="For Kids" {{ old('category', $product->category) == 'For Kids' ? 'selected' : '' }}>For Kids</option>
+                                <option value="Others" {{ old('category', $product->category) == 'Others' ? 'selected' : '' }}>Others</option>
                             </select>
+                            @error('category')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="form-grid three-column">
                         <div class="form-group">
-                            <label for="price">Harga <span>*</span></label>
+                            <label for="price">Harga (Rp) <span>*</span></label>
                             <div class="input-prefix">
                                 <span>Rp</span>
                                 <input type="number" id="price" name="price" value="{{ old('price', $product->price) }}" min="0" required>
                             </div>
+                            @error('price')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="stock">Stok <span>*</span></label>
                             <input type="number" id="stock" name="stock" value="{{ old('stock', $product->stock) }}" min="0" required>
+                            @error('stock')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">

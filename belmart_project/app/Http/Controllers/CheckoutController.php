@@ -75,6 +75,8 @@ class CheckoutController extends Controller
                 'required',
                 'string',
             ],
+        ], [
+            'promo_code.required' => 'Silakan masukkan kode voucher promo terlebih dahulu.',
         ]);
 
         $cart = Cart::with('items.product')
@@ -230,6 +232,13 @@ class CheckoutController extends Controller
                 'string',
                 'max:1000',
             ],
+        ], [
+            'shipping_name.required' => 'Nama penerima wajib diisi.',
+            'shipping_name.max' => 'Nama penerima maksimal 255 karakter.',
+            'shipping_phone.required' => 'Nomor telepon / WhatsApp penerima wajib diisi.',
+            'shipping_address.required' => 'Alamat lengkap pengiriman wajib diisi.',
+            'payment_method.required' => 'Metode pembayaran wajib dipilih.',
+            'payment_method.in' => 'Metode pembayaran yang dipilih tidak valid.',
         ]);
 
         $order = DB::transaction(function () use (

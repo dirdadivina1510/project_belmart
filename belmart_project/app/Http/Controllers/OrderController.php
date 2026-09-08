@@ -107,6 +107,9 @@ class OrderController extends Controller
     {
         $validated = $request->validate([
             'status' => 'required|in:pending,processing,shipped,completed,cancelled',
+        ], [
+            'status.required' => 'Status pesanan wajib dipilih.',
+            'status.in' => 'Status pesanan yang dipilih tidak valid.',
         ]);
 
         $currentStatus = $order->status;
@@ -135,6 +138,9 @@ class OrderController extends Controller
     {
         $validated = $request->validate([
             'payment_status' => 'required|in:unpaid,waiting,paid,rejected',
+        ], [
+            'payment_status.required' => 'Status pembayaran wajib dipilih.',
+            'payment_status.in' => 'Status pembayaran yang dipilih tidak valid.',
         ]);
 
         $order->update(['payment_status' => $validated['payment_status']]);

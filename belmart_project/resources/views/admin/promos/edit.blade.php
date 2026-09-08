@@ -41,51 +41,78 @@
                 <h3>Informasi Promo</h3>
 
                 <div class="form-group" style="margin-bottom:15px;">
-                    <label>Nama Promo <span>*</span></label>
+                    <label>Nama Promo <span style="color:#e63946;">*</span></label>
                     <input type="text" name="name" value="{{ old('name', $promo->name) }}" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                    @error('name')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group" style="margin-bottom:15px;">
-                    <label>Kode Promo <span>*</span></label>
-                    <input type="text" name="code" value="{{ old('code', $promo->code) }}" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                    <label>Kode Promo <span style="color:#e63946;">*</span></label>
+                    <input type="text" name="code" value="{{ old('code', $promo->code) }}" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc; text-transform:uppercase;">
+                    @error('code')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group" style="margin-bottom:15px;">
-                    <label>Jenis Diskon <span>*</span></label>
+                    <label>Jenis Diskon <span style="color:#e63946;">*</span></label>
                     <select name="discount_type" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
                         <option value="percentage" {{ old('discount_type', $promo->discount_type) == 'percentage' ? 'selected' : '' }}>Persentase (%)</option>
                         <option value="fixed" {{ old('discount_type', $promo->discount_type) == 'fixed' ? 'selected' : '' }}>Potongan Nominal (Rp)</option>
                     </select>
+                    @error('discount_type')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group" style="margin-bottom:15px;">
-                    <label>Nilai Diskon <span>*</span></label>
+                    <label>Nilai Diskon <span style="color:#e63946;">*</span></label>
                     <input type="number" name="discount_value" value="{{ old('discount_value', $promo->discount_value) }}" min="0" step="any" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                    @error('discount_value')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group" style="margin-bottom:15px;">
                     <label>Minimum Pembelian (Rp)</label>
                     <input type="number" name="minimum_purchase" value="{{ old('minimum_purchase', $promo->minimum_purchase) }}" min="0" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                    @error('minimum_purchase')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group" style="margin-bottom:15px;">
                     <label>Maksimal Diskon (Rp)</label>
                     <input type="number" name="maximum_discount" value="{{ old('maximum_discount', $promo->maximum_discount) }}" min="0" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                    @error('maximum_discount')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group" style="margin-bottom:15px;">
                     <label>Kuota Promo</label>
                     <input type="number" name="quota" value="{{ old('quota', $promo->quota) }}" min="1" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                    @error('quota')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
                     <div class="form-group">
-                        <label>Tanggal Mulai <span>*</span></label>
+                        <label>Tanggal Mulai <span style="color:#e63946;">*</span></label>
                         <input type="date" name="start_date" value="{{ old('start_date', \Carbon\Carbon::parse($promo->start_date)->format('Y-m-d')) }}" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                        @error('start_date')
+                            <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="form-group">
-                        <label>Tanggal Berakhir <span>*</span></label>
+                        <label>Tanggal Berakhir <span style="color:#e63946;">*</span></label>
                         <input type="date" name="end_date" value="{{ old('end_date', \Carbon\Carbon::parse($promo->end_date)->format('Y-m-d')) }}" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+                        @error('end_date')
+                            <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                        @enderror
                     </div>
                 </div>
 

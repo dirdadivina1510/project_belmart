@@ -63,31 +63,40 @@
             <form action="{{ route('register.process') }}" method="POST">
                 @csrf
                 <div class="input-group">
-                    <label>Nama Lengkap</label>
+                    <label>Nama Lengkap <span style="color:#e63946;">*</span></label>
                     <div class="input-box">
                         <i class="fa-regular fa-user"></i>
-                        <input type="text" name="name" value="{{ old('name') }}" placeholder="Masukkan nama lengkap" required>
+                        <input type="text" name="name" value="{{ old('name') }}" placeholder="Masukkan nama lengkap" required autofocus>
                     </div>
+                    @error('name')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="input-group">
-                    <label>Email</label>
+                    <label>Email <span style="color:#e63946;">*</span></label>
                     <div class="input-box">
                         <i class="fa-regular fa-envelope"></i>
                         <input type="email" name="email" value="{{ old('email') }}" placeholder="Masukkan email" required>
                     </div>
+                    @error('email')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="input-group">
-                    <label>Nomor HP / WhatsApp</label>
+                    <label>Nomor HP / WhatsApp <span style="color:#e63946;">*</span></label>
                     <div class="input-box">
                         <i class="fa-solid fa-phone"></i>
-                        <input type="text" name="phone" value="{{ old('phone') }}" placeholder="Contoh: 081234567890">
+                        <input type="tel" name="phone" value="{{ old('phone') }}" placeholder="Contoh: 081234567890" required>
                     </div>
+                    @error('phone')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="input-group">
-                    <label>Password</label>
+                    <label>Password <span style="color:#e63946;">*</span></label>
                     <div class="input-box">
                         <i class="fa-solid fa-lock"></i>
                         <input id="password" type="password" name="password" placeholder="Minimal 6 karakter" required>
@@ -95,10 +104,13 @@
                             <i class="fa-regular fa-eye"></i>
                         </button>
                     </div>
+                    @error('password')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="input-group">
-                    <label>Konfirmasi Password</label>
+                    <label>Konfirmasi Password <span style="color:#e63946;">*</span></label>
                     <div class="input-box">
                         <i class="fa-solid fa-lock"></i>
                         <input id="password_confirmation" type="password" name="password_confirmation" placeholder="Ulangi password" required>
@@ -106,6 +118,9 @@
                             <i class="fa-regular fa-eye"></i>
                         </button>
                     </div>
+                    @error('password_confirmation')
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <button class="login-button" type="submit">

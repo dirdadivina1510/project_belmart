@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" modified="2026-09-08T09:40:00.000Z" agent="BelmartFlowchartGenerator" version="21.6.8" type="device">
+  <diagram id="belmart-flowchart-manual-polos" name="Flowchart Manual Toko Fisik (Polos)">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==================== HEADER TITLE (POLOS) ==================== -->
+        <mxCell id="title_box" value="&lt;b&gt;FLOWCHART SISTEM MANUAL (SEBELUM ADA WEBSITE)&lt;/b&gt;&lt;br&gt;Proses Bisnis Belanja Langsung di Toko Fisik Belmart / Belfoods" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="30" width="500" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== LEGEND BOX (POLOS) ==================== -->
+        <mxCell id="legend_box" value="&lt;b&gt;Keterangan Simbol Flowchart:&lt;/b&gt;&lt;br&gt;&lt;br&gt;🔘 &lt;b&gt;Oval (Terminator):&lt;/b&gt; Mulai / Selesai&lt;br&gt;🛑 &lt;b&gt;Hexagon (Operation):&lt;/b&gt; Operasi / Aktivitas Manual&lt;br&gt;▰ &lt;b&gt;Jajar Genjang (Parallelogram):&lt;/b&gt; Input / Output Data &amp; Fisik&lt;br&gt;◆ &lt;b&gt;Belah Ketupat (Decision):&lt;/b&gt; Titik Keputusan (Ya / Tidak)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;align=left;spacingLeft=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="270" height="135" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== FLOWCHART NODES ==================== -->
+        
+        <!-- 1. Start (Terminator - Oval) -->
+        <mxCell id="node_start" value="&lt;b&gt;Mulai&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 2. Datang ke Toko (Operation - Hexagon) -->
+        <mxCell id="node_datang" value="Pelanggan datang langsung&#xa;ke Toko Fisik Belmart" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="335" y="200" width="230" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 3. Memilih Produk di Freezer (Operation - Hexagon) -->
+        <mxCell id="node_pilih" value="Mencari dan melihat produk&#xa;frozen food di etalase / freezer toko" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="335" y="285" width="230" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 4. Decision: Stok Ada? (Decision - Diamond) -->
+        <mxCell id="node_dec_stok" value="Apakah stok&#xa;produk tersedia&#xa;di freezer?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="370" width="190" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- 4a. Cabang Tidak Ada Stok (Operation - Hexagon) -->
+        <mxCell id="node_tanya_staf" value="Tanya ketersediaan ke staf toko&#xa;/ Pilih varian produk lain" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="610" y="385" width="230" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 5. Ambil Produk (Input/Output - Parallelogram/Jajar Genjang) -->
+        <mxCell id="node_ambil_produk" value="Mengambil produk yang dipilih&#xa;&amp; memasukkan ke keranjang belanja" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="325" y="490" width="250" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 6. Decision: Tambah Barang? (Decision - Diamond) -->
+        <mxCell id="node_dec_tambah" value="Ada produk lain&#xa;yang ingin dibeli?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="585" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 7. Menuju Kasir (Operation - Hexagon) -->
+        <mxCell id="node_ke_kasir" value="Pelanggan membawa keranjang&#xa;belanja menuju meja kasir" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="335" y="700" width="230" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 8. Serahkan Barang ke Kasir (Input/Output - Parallelogram) -->
+        <mxCell id="node_serah_barang" value="Menyerahkan barang belanjaan&#xa;ke petugas kasir" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="790" width="240" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 9. Kasir Menghitung Total (Operation - Hexagon) -->
+        <mxCell id="node_hitung_kasir" value="Kasir memeriksa barang &amp;&#xa;menghitung total tagihan belanja" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="335" y="885" width="230" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 10. Kasir Menyebutkan Total (Input/Output - Parallelogram) -->
+        <mxCell id="node_info_total" value="Kasir menginformasikan&#xa;nominal total tagihan ke pelanggan" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="325" y="975" width="250" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 11. Pelanggan Membayar (Input/Output - Parallelogram) -->
+        <mxCell id="node_bayar_tunai" value="Pelanggan menyerahkan uang&#xa;pembayaran secara tunai (Cash)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1070" width="250" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 12. Decision: Ada Kembalian? (Decision - Diamond) -->
+        <mxCell id="node_dec_kembalian" value="Apakah ada&#xa;uang kembalian?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1165" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 12a. Kasir Beri Kembalian (Input/Output - Parallelogram) -->
+        <mxCell id="node_beri_kembalian" value="Kasir menyerahkan uang kembalian&#xa;ke pelanggan" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1175" width="240" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 13. Kasir Buat Nota & Kemas (Operation - Hexagon) -->
+        <mxCell id="node_kemas_nota" value="Kasir mencetak/menulis nota fisik&#xa;&amp; membungkus produk frozen food" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1285" width="240" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 14. Pelanggan Menerima Barang & Nota (Input/Output - Parallelogram) -->
+        <mxCell id="node_terima_barang" value="Pelanggan menerima nota belanja fisik&#xa;&amp; barang belanjaan" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1380" width="250" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 15. Selesai (Terminator - Oval) -->
+        <mxCell id="node_end" value="&lt;b&gt;Selesai&lt;/b&gt;&#xa;(Pelanggan Pulang Membawa Barang)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1480" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== CONNECTORS / ARROWS (POLOS HITAM) ==================== -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_start" target="node_datang">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_datang" target="node_pilih">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_pilih" target="node_dec_stok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Decision Stok: Tidak -->
+        <mxCell id="edge4_tidak" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontColor=#000000;" edge="1" parent="1" source="node_dec_stok" target="node_tanya_staf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dari Tanya Staf kembali ke pilih -->
+        <mxCell id="edge4_kembali" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;" edge="1" parent="1" source="node_tanya_staf" target="node_pilih">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="312.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Stok: Ya -->
+        <mxCell id="edge4_ya" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontColor=#000000;" edge="1" parent="1" source="node_dec_stok" target="node_ambil_produk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_ambil_produk" target="node_dec_tambah">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Decision Tambah: Ya (Loop back to pilih) -->
+        <mxCell id="edge6_ya" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontColor=#000000;" edge="1" parent="1" source="node_dec_tambah" target="node_pilih">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="625" />
+              <mxPoint x="230" y="312.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Tambah: Tidak -->
+        <mxCell id="edge6_tidak" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontColor=#000000;" edge="1" parent="1" source="node_dec_tambah" target="node_ke_kasir">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_ke_kasir" target="node_serah_barang">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_serah_barang" target="node_hitung_kasir">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_hitung_kasir" target="node_info_total">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_info_total" target="node_bayar_tunai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_bayar_tunai" target="node_dec_kembalian">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Decision Kembalian: Ya -->
+        <mxCell id="edge12_ya" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontColor=#000000;" edge="1" parent="1" source="node_dec_kembalian" target="node_beri_kembalian">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge12_kembalian_to_kemas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_beri_kembalian" target="node_kemas_nota">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="1315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Kembalian: Tidak (Uang Pas) -->
+        <mxCell id="edge12_tidak" value="Tidak (Uang Pas)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontColor=#000000;" edge="1" parent="1" source="node_dec_kembalian" target="node_kemas_nota">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_kemas_nota" target="node_terima_barang">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="node_terima_barang" target="node_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

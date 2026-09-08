@@ -65,18 +65,18 @@
             <form action="{{ route('login.process') }}" method="POST">
                 @csrf
                 <div class="input-group">
-                    <label>Email</label>
+                    <label>Email <span style="color:#e63946;">*</span></label>
                     <div class="input-box">
                         <i class="fa-regular fa-user"></i>
-                        <input type="email" name="email" value="{{ old('email') }}" placeholder="Masukkan email" required>
+                        <input type="email" name="email" value="{{ old('email') }}" placeholder="Masukkan email" required autofocus>
                     </div>
                     @error('email')
-                        <small style="color:#e63946; font-size:12px;">{{ $message }}</small>
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
                     @enderror
                 </div>
 
                 <div class="input-group">
-                    <label>Password</label>
+                    <label>Password <span style="color:#e63946;">*</span></label>
                     <div class="input-box">
                         <i class="fa-solid fa-lock"></i>
                         <input id="password" type="password" name="password" placeholder="Masukkan password" required>
@@ -85,7 +85,7 @@
                         </button>
                     </div>
                     @error('password')
-                        <small style="color:#e63946; font-size:12px;">{{ $message }}</small>
+                        <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
                     @enderror
                 </div>
 

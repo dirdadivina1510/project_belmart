@@ -15,10 +15,26 @@ class User extends Authenticatable
         'email',
         'password',
         'phone',
+        'birthdate',
+        'gender',
+        'job',
+        'bio',
         'address',
+        'province',
+        'city',
+        'district',
+        'postal_code',
         'profile_photo',
         'role',
     ];
+
+    public function getAvatarUrlAttribute()
+    {
+        if ($this->profile_photo && \Illuminate\Support\Facades\Storage::disk('public')->exists($this->profile_photo)) {
+            return asset('storage/' . $this->profile_photo);
+        }
+        return null;
+    }
 
     protected $hidden = [
         'password',

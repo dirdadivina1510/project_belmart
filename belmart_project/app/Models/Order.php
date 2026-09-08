@@ -11,25 +11,24 @@ class Order extends Model
 
     protected $fillable = [
         'user_id',
-
+        'promo_id',
         'order_number',
-
         'subtotal',
         'discount',
         'shipping_cost',
         'total',
-
         'promo_code',
-
         'status',
         'payment_status',
         'payment_method',
-
         'shipping_name',
         'shipping_phone',
         'shipping_address',
-
+        'note',
         'notes',
+        'ordered_at',
+        'completed_at',
+        'cancelled_at',
     ];
 
     protected $casts = [
@@ -37,8 +36,20 @@ class Order extends Model
         'discount' => 'decimal:2',
         'shipping_cost' => 'decimal:2',
         'total' => 'decimal:2',
+        'ordered_at' => 'datetime',
+        'completed_at' => 'datetime',
+        'cancelled_at' => 'datetime',
     ];
 
+    public function getNotesAttribute()
+    {
+        return $this->note;
+    }
+
+    public function setNotesAttribute($value)
+    {
+        $this->attributes['note'] = $value;
+    }
 
     /*
     |--------------------------------------------------------------------------
@@ -49,6 +60,11 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function promo()
+    {
+        return $this->belongsTo(Promo::class);
     }
 
     public function items()

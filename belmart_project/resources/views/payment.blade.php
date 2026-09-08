@@ -29,13 +29,28 @@
             <div style="font-size:12px; color:#777; margin-top:2px;">NMID: ID1029384756102 (Self Pickup)</div>
         </div>
 
+        @if($errors->any())
+            <div style="background:#fee2e2; border:1px solid #fca5a5; color:#991b1b; padding:12px 18px; border-radius:12px; max-width:500px; margin:0 auto 20px; text-align:left; font-size:13px;">
+                <ul style="margin:0; padding-left:20px;">
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <!-- UPLOAD BUKTI BAYAR FORM -->
-        <form action="{{ route('payment') }}" method="POST" enctype="multipart/form-data" style="max-width:500px; margin:0 auto; text-align:left; background:#f9fbf8; padding:25px; border-radius:18px; border:1px solid #e2ebd9;">
+        <form action="{{ route('payment.process') }}" method="POST" enctype="multipart/form-data" style="max-width:500px; margin:0 auto; text-align:left; background:#f9fbf8; padding:25px; border-radius:18px; border:1px solid #e2ebd9;">
             @csrf
             <label style="display:block; font-weight:600; color:#333; font-size:14px; margin-bottom:8px;">
-                <i class="fa-solid fa-cloud-arrow-up" style="color:#5b991d; margin-right:6px;"></i> Upload Bukti Pembayaran (JPG, PNG, WEBP)
+                <i class="fa-solid fa-cloud-arrow-up" style="color:#5b991d; margin-right:6px;"></i> Upload Bukti Pembayaran (JPG, PNG, WEBP, maks 4MB)
             </label>
-            <input type="file" name="payment_proof" accept="image/*" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:10px; background:#fff; margin-bottom:15px;">
+            <input type="file" id="payment_proof_input" name="payment_proof" accept="image/jpeg,image/png,image/webp,image/jpg" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:10px; background:#fff; margin-bottom:12px;" onchange="previewProof(event)">
+
+            <div id="proof-preview-wrapper" style="display:none; text-align:center; margin-bottom:15px; padding:10px; background:#fff; border-radius:12px; border:1px dashed #79C33B;">
+                <img id="proof-preview-img" src="" alt="Preview Bukti Bayar" style="max-height:180px; max-width:100%; border-radius:8px; object-fit:contain;">
+                <div style="font-size:11px; color:#5b991d; margin-top:5px; font-weight:600;">✓ Foto bukti bayar siap dikirim</div>
+            </div>
 
             <button type="submit" style="width:100%; padding:14px; background:linear-gradient(135deg, #7FC53D, #5b991d); color:#fff; border:none; border-radius:12px; font-weight:700; font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
                 <i class="fa-solid fa-paper-plane"></i> Kirim Bukti Bayar
@@ -49,6 +64,22 @@
 </div>
 
 <script>
+function previewProof(event) {
+    const input = event.target;
+    const wrapper = document.getElementById('proof-preview-wrapper');
+    const img = document.getElementById('proof-preview-img');
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            img.src = e.target.result;
+            wrapper.style.display = 'block';
+        };
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        wrapper.style.display = 'none';
+    }
+}
+
 // REAL-TIME 15 MINUTES TIMER COUNTER
 (function() {
     let duration = 15 * 60; // 15 minutes in seconds

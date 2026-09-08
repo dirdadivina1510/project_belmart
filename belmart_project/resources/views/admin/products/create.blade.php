@@ -52,28 +52,45 @@
                         <div class="form-group">
                             <label for="name">Nama Produk <span>*</span></label>
                             <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Contoh: Belfoods Chicken Nugget 500gr" required>
+                            @error('name')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="category">Kategori <span>*</span></label>
                             <select id="category" name="category" required>
-                                <option value="Nugget" selected>Nugget</option>
+                                <option value="" disabled {{ old('category') ? '' : 'selected' }}>-- Pilih Kategori --</option>
+                                <option value="Nugget" {{ old('category') == 'Nugget' ? 'selected' : '' }}>Nugget</option>
+                                <option value="Sosis" {{ old('category') == 'Sosis' ? 'selected' : '' }}>Sosis</option>
+                                <option value="Bakso" {{ old('category') == 'Bakso' ? 'selected' : '' }}>Bakso</option>
+                                <option value="For Kids" {{ old('category') == 'For Kids' ? 'selected' : '' }}>For Kids</option>
+                                <option value="Others" {{ old('category') == 'Others' ? 'selected' : '' }}>Others</option>
                             </select>
+                            @error('category')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="form-grid three-column">
                         <div class="form-group">
-                            <label for="price">Harga <span>*</span></label>
+                            <label for="price">Harga (Rp) <span>*</span></label>
                             <div class="input-prefix">
                                 <span>Rp</span>
                                 <input type="number" id="price" name="price" value="{{ old('price') }}" min="0" placeholder="35000" required>
                             </div>
+                            @error('price')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="stock">Stok <span>*</span></label>
                             <input type="number" id="stock" name="stock" value="{{ old('stock', 0) }}" min="0" placeholder="0" required>
+                            @error('stock')
+                                <small style="color:#e63946; font-size:12px; display:block; margin-top:4px;">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">

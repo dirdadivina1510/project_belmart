@@ -17,6 +17,10 @@ class LoginController extends Controller
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required|string',
+        ], [
+            'email.required' => 'Kolom email wajib diisi.',
+            'email.email' => 'Format email tidak valid.',
+            'password.required' => 'Kolom password wajib diisi.',
         ]);
 
         $remember = $request->boolean('remember');
@@ -38,7 +42,7 @@ class LoginController extends Controller
         }
 
         return redirect()
-            ->route('home')
+            ->intended(route('home'))
             ->with('success', 'Login berhasil! Selamat berbelanja.');
     }
 

@@ -84,6 +84,11 @@ class PaymentController extends Controller
                 'mimes:jpg,jpeg,png,webp',
                 'max:4096',
             ],
+        ], [
+            'payment_proof.required' => 'File bukti pembayaran wajib diunggah.',
+            'payment_proof.image' => 'File bukti pembayaran harus berupa gambar.',
+            'payment_proof.mimes' => 'Format file harus berupa JPG, JPEG, PNG, atau WEBP.',
+            'payment_proof.max' => 'Ukuran file bukti pembayaran maksimal 4 MB.',
         ]);
 
 
@@ -304,6 +309,9 @@ class PaymentController extends Controller
                 'max:1000',
             ],
 
+        ], [
+            'status.required' => 'Status verifikasi pembayaran wajib dipilih.',
+            'status.in' => 'Pilihan status verifikasi pembayaran tidak valid.',
         ]);
 
 
